@@ -16,6 +16,6 @@ public class Adventurer {
     }
 
     public String getAlignment() {
-        return "Evil";
+        return alignment;
     }
 }

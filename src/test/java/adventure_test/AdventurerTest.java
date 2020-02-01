@@ -23,9 +23,16 @@ public class AdventurerTest {
     }
 
     @Test
-    public void canSetAlignment() {
+    public void canGetAlignment() {
         underTest = new Adventurer("Moriarty", "Evil");
         String expected = underTest.getAlignment();
         assertEquals(expected, "Evil");
+    }
+
+    @Test
+    public void canSetAlignment() {
+        underTest = new Adventurer("Karl Marx", "Good");
+        String expected = underTest.getAlignment();
+        assertEquals(expected, "Good");
     }
 }
