@@ -13,6 +13,12 @@ public class AdventurerTest {
         underTest = new Adventurer("Olaf");
         String expected = underTest.getName();
         assertEquals(expected, "Olaf");
+    }
 
+    @Test
+    public void canSetName() {
+        underTest = new Adventurer("Abigail");
+        String expected = underTest.getName();
+        assertEquals(expected, "Abigail");
     }
 }
