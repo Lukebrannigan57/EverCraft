@@ -2,10 +2,26 @@ package adventure;
 
 public class Adventurer {
 
-    String name;
-    String alignment;
 
-    public Adventurer(String name, String alignment) {
+    private final Enum alignment;
+    String name;
+
+    public int getArmorClass() {
+        return 10;
+    }
+
+    public int getHitPoints() {
+        return 5;
+    }
+
+    public enum alignment{
+        GOOD,
+        NEUTRAL,
+        EVIL
+    };
+
+
+    public Adventurer(String name, Enum alignment) {
         this.name = name;
         this.alignment = alignment;
 
@@ -15,7 +31,7 @@ public class Adventurer {
         return name;
     }
 
-    public String getAlignment() {
+    public Enum getAlignment() {
         return alignment;
     }
 }
