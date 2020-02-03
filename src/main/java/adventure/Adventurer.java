@@ -2,11 +2,9 @@ package adventure;
 
 public class Adventurer {
 
+
+    private final Enum alignment;
     String name;
-    String alignment;
-
-
-    public Adventurer(String name, String alignment) {
 
     public enum alignment{
         GOOD,
@@ -15,7 +13,6 @@ public class Adventurer {
     };
 
     public Adventurer(String name, Enum alignment) {
-
         this.name = name;
         this.alignment = alignment;
 
@@ -25,7 +22,7 @@ public class Adventurer {
         return name;
     }
 
-    public String getAlignment() {
+    public Enum getAlignment() {
         return alignment;
     }
 
