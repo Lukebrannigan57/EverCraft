@@ -6,6 +6,11 @@ public class Adventurer {
     private final Enum alignment;
     String name;
 
+    public static int attackRoll() {
+        int attackRoll = Dice.diceTwenty();
+        return attackRoll;
+    }
+
     public enum alignment{
         GOOD,
         NEUTRAL,
@@ -15,7 +20,6 @@ public class Adventurer {
     public Adventurer(String name, Enum alignment) {
         this.name = name;
         this.alignment = alignment;
-
     }
 
     public String getName() {
@@ -26,7 +30,7 @@ public class Adventurer {
         return alignment;
     }
 
-    public int getArmorClass() {
+    public static int getArmorClass() {
         return 10;
     }
 
