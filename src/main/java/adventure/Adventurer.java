@@ -5,9 +5,9 @@ public class Adventurer {
     String name;
     String alignment;
 
-<<<<<<< Updated upstream
+
     public Adventurer(String name, String alignment) {
-=======
+
     public enum alignment{
         GOOD,
         NEUTRAL,
@@ -15,7 +15,7 @@ public class Adventurer {
     };
 
     public Adventurer(String name, Enum alignment) {
->>>>>>> Stashed changes
+
         this.name = name;
         this.alignment = alignment;
 
