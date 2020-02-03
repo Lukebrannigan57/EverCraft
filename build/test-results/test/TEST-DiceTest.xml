@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-03T21:20:09" hostname="LAPTOP-CFNC9NBC" time="0.005">
+  <properties/>
+  <testcase name="canRollTwentySideDice" classname="DiceTest" time="0.005"/>
+  <system-out><![CDATA[8
+16
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
