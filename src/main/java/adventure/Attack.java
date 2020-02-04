@@ -16,7 +16,7 @@ public class Attack {
         return successfulAttack;
     }
 
-    public static boolean AttackerAttack(boolean b) {
+    public static boolean AttackerAttack() {
         int attack = AttackerAttackRoll;
         if (AttackerAttackRoll < 0) {
             successfulAttack = true;

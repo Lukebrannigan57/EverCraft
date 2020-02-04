@@ -40,10 +40,17 @@ public class AttackerTest {
         assertTrue(expected);
     }
 
+    @Test
     public void attackerCanBeAttackedTwo() {
-        testAttack = Attack.AttackerAttack(true);
-        boolean expected = 
-        assertTrue
+        testAttack = Attack.AttackerAttack();
+        System.out.println(testAttack);
+        assertTrue(testAttack);
+    }
 
+    @Test
+    public void attackerCanAttack() {
+        testAttack = Attack.AdventurerAttack();
+        System.out.println(testAttack);
+        assertTrue(testAttack);
     }
 }
