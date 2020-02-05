@@ -2,28 +2,33 @@ package adventure;
 
 public class Attack {
 
-    static int AdventurerAttackRoll = Attacker.getArmorClass() - Adventurer.attackRoll();
-    static int AttackerAttackRoll = Adventurer.getArmorClass() - Attacker.attackRoll();
-    static boolean successfulAttack;
+    public static boolean adventurerHit;
+    public static boolean attackerHit;
+//    static int adventurerAttackRoll = Attacker.getArmorClass() - Adventurer.attackRoll();
+//    static int attackerAttackRoll = Adventurer.getArmorClass() - Attacker.attackRoll();
+    static int attackerAttackRoll;
+    static int adventurerAttackRoll;
+    static int attackHit = attackerAttackRoll - Adventurer.getArmorClass();
 
-    public static boolean AdventurerAttack(){
-        int attack = AdventurerAttackRoll;
-        if(AdventurerAttackRoll < 0){
-            successfulAttack = true;
+    public static boolean AdventurerAttack(boolean adventurerHit){
+        if(adventurerAttackRoll < 0){
+            adventurerHit = true;
         } else {
-            successfulAttack = false;
+            adventurerHit = false;
         }
-        return successfulAttack;
+        return adventurerHit;
     }
 
-    public static boolean AttackerAttack() {
-        int attack = AttackerAttackRoll;
-        if (AttackerAttackRoll < 0) {
-            successfulAttack = true;
+    public static int attackerAttackRoll(int attackerAttackRoll) {
+        return attackHit;
+    }
+    public static boolean AttackerAttack(boolean attackerHit) {
+        if (attackHit < 0) {
+            attackerHit = true;
         } else {
-            successfulAttack = false;
+            attackerHit = false;
         }
-        return successfulAttack;
+        return attackerHit;
     }
 
 }

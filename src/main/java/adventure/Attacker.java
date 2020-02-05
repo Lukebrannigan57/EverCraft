@@ -2,7 +2,7 @@ package adventure;
 
 public class Attacker {
 
-    int armorClass;
+    private static int hitPoints;
     String type;
 
     public Attacker(String type) {
@@ -19,7 +19,15 @@ public class Attacker {
     }
 
     public int getHitPoints() {
-        return 5;
+        hitPoints = 5;
+        if (adventurerHit(true)){
+            hitPoints = hitPoints - 1;
+        }
+        return hitPoints;
+    }
+
+    public static boolean adventurerHit(boolean result) {
+        return result;
     }
 
     public static int getArmorClass() {

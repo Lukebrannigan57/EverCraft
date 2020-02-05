@@ -1,5 +1,6 @@
 package adventure_test;
 
+import adventure.Adventurer;
 import adventure.Attack;
 import adventure.Attacker;
 import adventure.Dice;
@@ -12,7 +13,8 @@ import static org.junit.Assert.assertTrue;
 
 public class AttackerTest {
     Attacker underTest;
-    boolean testAttack;
+    Attack underTest2;
+    boolean testAttack = Attack.AttackerAttack(true);;
 
     @Before
     public void setup(){
@@ -30,7 +32,7 @@ public class AttackerTest {
         assertEquals(expected, 10);
     }
 
-    @Ignore
+    @Ignore //ignored as the test is the code
     @Test
     public void attackerCanBeAttacked(){
         boolean expected = (underTest.getArmorClass() < Dice.diceTwenty());
@@ -40,17 +42,19 @@ public class AttackerTest {
         assertTrue(expected);
     }
 
+    @Ignore //ignored as based on a random boolean
     @Test
     public void attackerCanBeAttackedTwo() {
-        testAttack = Attack.AttackerAttack();
         System.out.println(testAttack);
         assertTrue(testAttack);
     }
 
     @Test
-    public void attackerCanAttack() {
-        testAttack = Attack.AdventurerAttack();
-        System.out.println(testAttack);
-        assertTrue(testAttack);
+    public void adventurerCanTakeDamage() {
+        Attacker.adventurerHit(true);
+        int expected = underTest.getHitPoints();
+        assertEquals(expected, 4);
     }
+
+
 }

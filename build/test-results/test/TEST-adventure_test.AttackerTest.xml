@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="adventure_test.AttackerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-04T00:03:06" hostname="LAPTOP-CFNC9NBC" time="0.005">
+<testsuite name="adventure_test.AttackerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-05T22:29:59" hostname="LAPTOP-CFNC9NBC" time="0.0">
   <properties/>
-  <testcase name="attackerCanAttack" classname="adventure_test.AttackerTest" time="0.005"/>
-  <system-out><![CDATA[true
-]]></system-out>
+  <testcase name="adventurerCanTakeDamage" classname="adventure_test.AttackerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,16 +1,17 @@
 package adventure;
+import adventure.Attack;
+
 
 public class Adventurer {
 
-
     private final Enum alignment;
+    private static int hitPoints;
     String name;
 
     public static int attackRoll() {
         int attackRoll = Dice.diceTwenty();
         return attackRoll;
     }
-
     public enum alignment{
         GOOD,
         NEUTRAL,
@@ -20,6 +21,7 @@ public class Adventurer {
     public Adventurer(String name, Enum alignment) {
         this.name = name;
         this.alignment = alignment;
+        this.hitPoints = getHitPoints();
     }
 
     public String getName() {
@@ -33,8 +35,17 @@ public class Adventurer {
     public static int getArmorClass() {
         return 10;
     }
-
-    public int getHitPoints() {
-        return 5;
+    public static boolean attackerHit(boolean result) {
+        return result;
     }
+
+    public static int getHitPoints() {
+        hitPoints = 5;
+        if (attackerHit(true)){
+            hitPoints = hitPoints - 1;
+        }
+        return hitPoints;
+    }
+
+
 }
